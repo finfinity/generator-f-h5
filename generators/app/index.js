@@ -89,9 +89,9 @@ module.exports = class extends Generator {
     );
 
   }
-  install() { //安装依赖
-    this.installDependencies({
-      bower: false
-    });
-  }
+  //   install() { //安装依赖
+  //     this.installDependencies({
+  //       bower: false
+  //     });
+  //   }
 };
