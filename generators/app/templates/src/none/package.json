@@ -1,5 +1,5 @@
 {
-  "name": "<%= projectName %>",
+  "name": "demo3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,13 +9,13 @@
     "start": "npm run dev",
     "dev": "http-server ./src -p 12345",
     "build:stage":
-      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>",
+      "mkdir ../../dist;rm -rf ../../dist/demo3;cp -rf src/. ../../dist/demo3",
     "build:pre":
-      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>",
+      "mkdir ../../dist;rm -rf ../../dist/demo3;cp -rf src/. ../../dist/demo3",
     "build:prod":
-      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>"
+      "mkdir ../../dist;rm -rf ../../dist/demo3;cp -rf src/. ../../dist/demo3"
   },
   "keywords": [],
   "author": "",
-  "license": "<%= projectLicense %>"
+  "license": "MIT"
 }
