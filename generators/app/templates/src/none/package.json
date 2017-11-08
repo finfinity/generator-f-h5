@@ -1,0 +1,21 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "http-server ./src -p 12345",
+    "build:stage":
+      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>",
+    "build:pre":
+      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>",
+    "build:prod":
+      "rm -rf ../../dist/<%= projectName %>;cp -rf src/. ../../dist/<%= projectName %>"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "<%= projectLicense %>"
+}

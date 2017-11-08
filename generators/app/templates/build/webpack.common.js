@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: "[name].[hash:10].js"
+    filename: "assets/js/[name].[hash:10].js"
   },
   resolve: {
     extensions: ['.js', '.json', '.scss'],
@@ -82,8 +82,7 @@ module.exports = {
       template: path.resolve(__dirname, '../src/index.html'),
       chunks: ['<%= projectName %>']
     }),
-    new ExtractTextPlugin("[name].[hash:10].css"),
+    new ExtractTextPlugin("assets/css/[name].[hash:10].css"),
     new webpack.HotModuleReplacementPlugin()
   ],
 };
-
