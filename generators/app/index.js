@@ -28,7 +28,7 @@ module.exports = class extends Generator {
         type: "list",
         name: "projectTemplate",
         message: "Please choose template:",
-        choices: ["default", "none"]
+        choices: ["default"]
       },
       {
         type: "list",
@@ -50,54 +50,41 @@ module.exports = class extends Generator {
     this.config.set("projectTemplate", this.projectTemplate);
   }
   writing() {
-    if (this.projectTemplate != "none") {
-      this.fs.copyTpl(
-        this.templatePath("package.json"),
-        this.destinationPath("package.json"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath("postcss.config.js"),
-        this.destinationPath("postcss.config.js"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath("README.md"),
-        this.destinationPath("README.md"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath(".babelrc"),
-        this.destinationPath(".babelrc"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath(".gitignore"),
-        this.destinationPath(".gitignore"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath("build"),
-        this.destinationPath("build"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath("src/" + this.projectTemplate),
-        this.destinationPath("src"),
-        this
-      );
-    } else {
-      this.fs.copyTpl(
-        this.templatePath("src/" + this.projectTemplate + "/package.json"),
-        this.destinationPath("package.json"),
-        this
-      );
-      this.fs.copyTpl(
-        this.templatePath("src/" + this.projectTemplate + "/src"),
-        this.destinationPath("src"),
-        this
-      );
-    }
+    this.fs.copyTpl(
+      this.templatePath("package.json"),
+      this.destinationPath("package.json"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath("postcss.config.js"),
+      this.destinationPath("postcss.config.js"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath("README.md"),
+      this.destinationPath("README.md"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath(".babelrc"),
+      this.destinationPath(".babelrc"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath(".gitignore"),
+      this.destinationPath(".gitignore"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath("build"),
+      this.destinationPath("build"),
+      this
+    );
+    this.fs.copyTpl(
+      this.templatePath("src/" + this.projectTemplate),
+      this.destinationPath("src"),
+      this
+    );
   }
   /* install() { //安装依赖
     this.installDependencies({
