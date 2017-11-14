@@ -1,19 +1,19 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    '<%= projectName %>': path.resolve(__dirname, '../src/js/index.js')
+    "<%= projectName %>": path.resolve(__dirname, "../src/js/index.js")
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, "../dist"),
     filename: "assets/js/[name].[hash:10].js"
   },
   resolve: {
-    extensions: ['.js', '.json', '.scss'],
+    extensions: [".js", ".json", ".scss"],
     alias: {}
   },
   module: {
@@ -24,7 +24,7 @@ module.exports = {
           fallback: "style-loader",
           use: [
             {
-              loader: "css-loader",
+              loader: "css-loader"
             },
             {
               loader: "postcss-loader"
@@ -37,27 +37,19 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-            'file-loader'
-        ]
+        use: ["file-loader"]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-           'file-loader'
-        ]
+        use: ["file-loader"]
       },
       {
         test: /\.(csv|tsv)$/,
-        use: [
-          'csv-loader'
-        ]
+        use: ["csv-loader"]
       },
       {
         test: /\.xml$/,
-        use: [
-          'xml-loader'
-        ]
+        use: ["xml-loader"]
       },
       {
         test: /(\.jsx|\.js)$/,
@@ -66,23 +58,27 @@ module.exports = {
         },
         exclude: /node_modules/
       },
+      {
+        test: /\.html$/,
+        use: [ "html-loader" ]
+      }
     ]
   },
   plugins: [
-    new webpack.BannerPlugin(''),
-    new CleanWebpackPlugin(['dist'], {
-      "root": path.resolve(__dirname, '../'),
-      "verbose": true,
-      "dry": false,
-      "exclude": ["files", "to", "ignore"],
-      "watch": false
+    new webpack.BannerPlugin(""),
+    new CleanWebpackPlugin(["dist"], {
+      root: path.resolve(__dirname, "../"),
+      verbose: true,
+      dry: false,
+      exclude: ["files", "to", "ignore"],
+      watch: false
     }),
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, '../src/index.html'),
-      chunks: ['<%= projectName %>']
+      filename: "index.html",
+      template: path.resolve(__dirname, "../src/index.html"),
+      chunks: ["<%= projectName %>"]
     }),
     new ExtractTextPlugin("assets/css/[name].[hash:10].css"),
     new webpack.HotModuleReplacementPlugin()
-  ],
+  ]
 };
