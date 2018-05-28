@@ -4,8 +4,8 @@ const path = require("path");
 var name = "<%= projectName %>";
 
 try {
-  fs.ensureDirSync(path.resolve(__dirname, "../../../dist"));
-  fs.removeSync(path.resolve(__dirname, "../../../dist/" + name));
+  fs.ensureDirSync(path.resolve(__dirname, "../../dist"));
+  fs.removeSync(path.resolve(__dirname, "../../dist/" + name));
   // fs.copySync(
   //   path.resolve(__dirname, "../src"),
   //   path.resolve(__dirname, "../../../dist/" + name),
@@ -13,7 +13,7 @@ try {
   // );
   fs.moveSync(
     path.resolve(__dirname, "../dist"),
-    path.resolve(__dirname, "../../../dist/" + name),
+    path.resolve(__dirname, "../../dist/" + name),
     {
       overwrite: true
     }
