@@ -9,9 +9,6 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for stage
-npm run build:stage
-
 # build for prod
 npm run build:prod
 
