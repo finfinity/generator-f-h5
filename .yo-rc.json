@@ -2,7 +2,7 @@
   "generator-node": {
     "promptValues": {
       "authorName": "fly",
-      "authorEmail": "",
+      "authorEmail": "fly@default.com",
       "authorUrl": ""
     }
   }

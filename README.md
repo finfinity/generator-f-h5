@@ -1,5 +1,5 @@
 # generator-f-h5 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> generator-f-h5
+> 
 
 ## Installation
 
@@ -30,9 +30,9 @@ MIT © [fly]()
 
 [npm-image]: https://badge.fury.io/js/generator-f-h5.svg
 [npm-url]: https://npmjs.org/package/generator-f-h5
-[travis-image]: https://travis-ci.org/finfinity/generator-f-h5.svg?branch=master
-[travis-url]: https://travis-ci.org/finfinity/generator-f-h5
-[daviddm-image]: https://david-dm.org/finfinity/generator-f-h5.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/finfinity/generator-f-h5
-[coveralls-image]: https://coveralls.io/repos/finfinity/generator-f-h5/badge.svg
-[coveralls-url]: https://coveralls.io/r/finfinity/generator-f-h5
+[travis-image]: https://travis-ci.org//generator-f-h5.svg?branch=master
+[travis-url]: https://travis-ci.org//generator-f-h5
+[daviddm-image]: https://david-dm.org//generator-f-h5.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org//generator-f-h5
+[coveralls-image]: https://coveralls.io/repos//generator-f-h5/badge.svg
+[coveralls-url]: https://coveralls.io/r//generator-f-h5
