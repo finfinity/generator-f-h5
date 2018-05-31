@@ -12,7 +12,7 @@ module.exports = merge(common, {
       path.join(__dirname, '../dist')
     ],
     port: 12345,
-    host: "localhost",
+    host: "0.0.0.0",
     proxy: {
       /*'/api': {
         target: 'https://other-server.example.com',
