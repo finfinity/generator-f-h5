@@ -11,7 +11,7 @@ module.exports = class extends Generator {
     this.props = {};
   }
   prompting() {
-    this.log(yosay("~" + chalk.red("generator-tutorabc-h5") + "~"));
+    this.log(yosay("~" + chalk.red("generator-f-h5") + "~"));
     return this.prompt([
       {
         type: "input",
