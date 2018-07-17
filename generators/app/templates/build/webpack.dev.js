@@ -8,7 +8,7 @@ module.exports = merge(common, {
   devServer: {
     hot: true,
     contentBase: [
-      path.join(__dirname, '../static'),
+      path.join(__dirname, '../'),
       path.join(__dirname, '../dist')
     ],
     port: 12345,
