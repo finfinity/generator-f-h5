@@ -2,7 +2,7 @@ import 'normalize.css';
 import '../css/style.scss';
 import wxsdk from "./wxsdk.js";
 
-if (process.env.BUILD_ENV == "uat") {
+if (process.env.NODE_ENV == "uat") {
   function loadJS(src, callback) {
     var script = document.createElement("script");
     var head = document.getElementsByTagName("head")[0];
