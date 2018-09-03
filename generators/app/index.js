@@ -85,11 +85,11 @@ module.exports = class extends Generator {
       this.destinationPath("src"),
       this
     );
-    this.fs.copyTpl(
+    /* this.fs.copyTpl(
       this.templatePath("static"),
       this.destinationPath("static"),
       this
-    );
+    ); */
   }
   /* install() { //安装依赖
     this.installDependencies({
