@@ -34,8 +34,9 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "dev": "cross-env NODE_ENV=develop webpack-dev-server --open --config build/webpack.dev.js",
-    "build:develop": "cross-env NODE_ENV=develop webpack --config build/webpack.prod.js && node build/publish.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --config build/webpack.dev.js",
+    "build:development": "cross-env NODE_ENV=development webpack --config build/webpack.prod.js && node build/publish.js",
+    "build:staging": "cross-env NODE_ENV=staging webpack --config build/webpack.prod.js && node build/publish.js",
     "build:prodction": "cross-env NODE_ENV=prodction webpack --config build/webpack.prod.js && node build/publish.js"
   },
   "keywords": [],
